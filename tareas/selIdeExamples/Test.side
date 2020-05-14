@@ -1,0 +1,118 @@
+{
+  "id": "bedfea00-fe06-475c-9a81-7b2c94b18b90",
+  "version": "2.0",
+  "name": "Test",
+  "url": "https://www.imdb.com",
+  "tests": [{
+    "id": "9a0fed09-5586-4f22-ae5f-174746d4d2a3",
+    "name": "Test",
+    "commands": [{
+      "id": "fda3305d-1692-4e02-ba95-98cb13e7013c",
+      "comment": "",
+      "command": "open",
+      "target": "/",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "4c69dc5f-b7d8-44f9-9498-f9caf7703142",
+      "comment": "",
+      "command": "setWindowSize",
+      "target": "1280x690",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "05c137e6-0642-486f-8212-8bc64f89fdc9",
+      "comment": "",
+      "command": "click",
+      "target": "id=suggestion-search",
+      "targets": [
+        ["id=suggestion-search", "id"],
+        ["name=q", "name"],
+        ["css=#suggestion-search", "css:finder"],
+        ["xpath=//input[@id='suggestion-search']", "xpath:attributes"],
+        ["xpath=//form[@id='nav-search-form']/div[2]/div/input", "xpath:idRelative"],
+        ["xpath=//div[2]/div/input", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "1855a8c3-6639-4840-82ce-c6d963607772",
+      "comment": "",
+      "command": "type",
+      "target": "id=suggestion-search",
+      "targets": [
+        ["id=suggestion-search", "id"],
+        ["name=q", "name"],
+        ["css=#suggestion-search", "css:finder"],
+        ["xpath=//input[@id='suggestion-search']", "xpath:attributes"],
+        ["xpath=//form[@id='nav-search-form']/div[2]/div/input", "xpath:idRelative"],
+        ["xpath=//div[2]/div/input", "xpath:position"]
+      ],
+      "value": "it"
+    }, {
+      "id": "982635ac-4e43-49b3-9e1f-ea91023d82e5",
+      "comment": "",
+      "command": "sendKeys",
+      "target": "id=suggestion-search",
+      "targets": [
+        ["id=suggestion-search", "id"],
+        ["name=q", "name"],
+        ["css=#suggestion-search", "css:finder"],
+        ["xpath=//input[@id='suggestion-search']", "xpath:attributes"],
+        ["xpath=//form[@id='nav-search-form']/div[2]/div/input", "xpath:idRelative"],
+        ["xpath=//div[2]/div/input", "xpath:position"]
+      ],
+      "value": "${KEY_ENTER}"
+    }, {
+      "id": "e926599c-e8c2-4838-ad40-a2b16fedfacc",
+      "comment": "",
+      "command": "click",
+      "target": "linkText=Movie",
+      "targets": [
+        ["linkText=Movie", "linkText"],
+        ["css=.findTitleSubfilterList > li:nth-child(1) > a", "css:finder"],
+        ["xpath=//a[contains(text(),'Movie')]", "xpath:link"],
+        ["xpath=//div[@id='sidebar']/div[3]/ul/ul/li/a", "xpath:idRelative"],
+        ["xpath=//a[contains(@href, '/find?q=it&s=tt&ttype=ft&ref_=fn_ft')]", "xpath:href"],
+        ["xpath=//ul/ul/li/a", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "e40cb28b-8287-4550-ae35-f053dcacda67",
+      "comment": "",
+      "command": "verifyText",
+      "target": "css=.findSectionHeader",
+      "targets": [
+        ["css=.findSectionHeader", "css:finder"],
+        ["xpath=//div[@id='main']/div/div[2]/h3", "xpath:idRelative"],
+        ["xpath=//h3", "xpath:position"],
+        ["xpath=//h3[contains(.,'Titles')]", "xpath:innerText"]
+      ],
+      "value": "Titles"
+    }, {
+      "id": "fcafcfdb-c94e-46b2-90dc-877c3cf5875d",
+      "comment": "",
+      "command": "verifyText",
+      "target": "linkText=It",
+      "targets": [
+        ["linkText=It", "linkText"],
+        ["css=.findResult:nth-child(1) > .result_text > a", "css:finder"],
+        ["xpath=//a[contains(text(),'It')]", "xpath:link"],
+        ["xpath=//div[@id='main']/div/div[2]/table/tbody/tr/td[2]/a", "xpath:idRelative"],
+        ["xpath=(//a[contains(@href, '/title/tt1396484/?ref_=fn_ft_tt_1')])[2]", "xpath:href"],
+        ["xpath=//td[2]/a", "xpath:position"],
+        ["xpath=//a[contains(.,'It')]", "xpath:innerText"]
+      ],
+      "value": "It"
+    }]
+  }],
+  "suites": [{
+    "id": "45d270f5-4fc2-4362-87ac-58ec5267c2f7",
+    "name": "Default Suite",
+    "persistSession": false,
+    "parallel": false,
+    "timeout": 300,
+    "tests": ["9a0fed09-5586-4f22-ae5f-174746d4d2a3"]
+  }],
+  "urls": ["https://www.imdb.com/"],
+  "plugins": []
+}
